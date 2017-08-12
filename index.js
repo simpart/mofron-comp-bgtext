@@ -2,6 +2,7 @@
  * @file   mofron-comp-bgtext/index.js
  * @author simpart
  */
+require('mofron-comp-text');
 
 /**
  * @class BgText
