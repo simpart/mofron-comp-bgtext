@@ -2,19 +2,20 @@
  * @file   mofron-comp-bgtext/index.js
  * @author simpart
  */
-require('mofron-comp-text');
+let mf = require('mofron');
+let Text = require('mofron-comp-text');
 
 /**
  * @class BgText
  * @brief background text component for mofron
  */
-mofron.comp.text.BgText = class extends mofron.comp.Text {
+mf.comp.BgText = class extends mofron.comp.Text {
     
-    constructor (prm_opt) {
+    constructor (po) {
         try {
             super();
             this.name('BgText');
-            this.prmOpt(prm_opt);
+            this.prmOpt(po);
         } catch (e) {
             console.error(e.stack);
             throw e;
@@ -38,5 +39,4 @@ mofron.comp.text.BgText = class extends mofron.comp.Text {
         }
     }
 }
-mofron.comp.text.bgtext = {};
-module.exports = mofron.comp.text.BgText;
+module.exports = mofron.comp.BgText;
